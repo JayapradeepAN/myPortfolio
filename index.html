@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Jayapradeep A N-Lead UX Designer</title>
+<title>Jayapradeep A N — Lead UX Designer</title>
 <meta name="description" content="Portfolio of Jayapradeep A N, Lead UX Designer. Case studies in fintech, healthcare and design systems.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,16 +46,17 @@ p{margin:0}
 
 /* Hero */
 .hero{padding:calc(64px + env(safe-area-inset-top,0px) + clamp(3rem,9vw,7rem)) 0 clamp(3rem,7vw,5rem)}
-.hero h1{font-size:clamp(2.25rem,7vw,70px);font-weight:400;max-width:22ch}
-.hero .lede{margin-top:1.75rem;max-width:56ch;font-size:clamp(1.1rem,2vw,1.3rem);color:var(--muted)}
-.hero .meta{display:flex;flex-wrap:wrap;gap:2.5rem;margin-top:3rem;padding-top:1.75rem;border-top:1px solid var(--line)}
-.meta div{max-width:16rem}
+.hero h1{font-size:clamp(2.25rem,7vw,70px);font-weight:400;max-width:none}
+.hero .lede{margin-top:1.75rem;max-width:none;font-size:clamp(1.1rem,2vw,1.3rem);color:var(--muted)}
+.hero .meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2.5rem;margin-top:3rem;padding-top:1.75rem;border-top:1px solid var(--line)}
+.meta div{max-width:none}
+@media (max-width:720px){.hero .meta{grid-template-columns:1fr;gap:1.5rem}}
 .meta b{display:block;font:600 2rem var(--head);letter-spacing:-.02em}
 .meta span{color:var(--muted);font-size:.95rem}
 .hero .intro{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
 @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
 
-section{padding:clamp(3.5rem,8vw,6rem) 0}
+section{padding:clamp(1.5rem,6vw,50px) 0}
 section h2{font-size:clamp(2rem,5vw,3.25rem);margin-bottom:2.25rem}
 
 /* About */
@@ -69,15 +70,19 @@ section h2{font-size:clamp(2rem,5vw,3.25rem);margin-bottom:2.25rem}
 .skills{padding:0}
 .skills h3:first-child{margin-top:.1rem}
 .skills h3{font-size:1.15rem;margin-bottom:1rem}
-.skills ul{list-style:none;margin:0 0 1.5rem;padding:0;display:flex;flex-wrap:wrap;gap:.5rem}
+.skills ul{list-style:none;margin:0 0 40px;padding:0;display:flex;flex-wrap:wrap;gap:.5rem}
 .skills li{background:var(--tint);padding:.35rem .85rem;border-radius:999px;font-size:.92rem;font-weight:500}
 .skills ul:last-child{margin-bottom:0}
+.cert{display:grid;gap:.2rem;font-size:.95rem;color:var(--muted)}
+.cert strong{color:var(--ink);font-size:1.02rem;font-weight:600}
+.cert .id{overflow-wrap:anywhere;font-size:.88rem}
+.cert a{width:fit-content;margin-top:.6rem;font-weight:600;color:var(--accent);text-decoration:underline;text-underline-offset:3px}
 .side{display:grid;gap:1.5rem}
 .photo{aspect-ratio:4/3;border-radius:20px;border:2px dashed var(--line);background:var(--tint);display:grid;place-content:center;justify-items:center;gap:.6rem;text-align:center;color:var(--muted);font-weight:500;font-size:.95rem}
 .photo svg{width:56px;height:56px}
 
 /* Case studies */
-.cases{display:grid;gap:1.5rem}
+.cases{display:grid;gap:40px}
 .case{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);background:var(--surface);border:1px solid var(--line);border-radius:24px;overflow:hidden}
 .case:nth-child(even) .shot{order:2}
 .shot{min-height:260px;padding:1.5rem;display:flex;align-items:flex-end}
@@ -87,6 +92,7 @@ section h2{font-size:clamp(2rem,5vw,3.25rem);margin-bottom:2.25rem}
 .case.c1 .shot img,.case.c2 .shot img,.case.c3 .shot img{aspect-ratio:2.25/1;min-height:200px}
 .case.c2 .shot img{object-position:50% 10.4%}
 .c1 .shot,.c2 .shot,.c3 .shot{border-bottom:1px solid var(--line)}
+.case.c1 .shot,.case.c2 .shot,.case.c3 .shot{order:0}
 .c1 .shot,.c2 .shot,.c3 .shot{padding:0;min-height:0;display:block;background:none}
 .c1 .shot img,.c2 .shot img,.c3 .shot img{aspect-ratio:2.8/1;min-height:150px;object-fit:cover;object-position:top;border:0;border-radius:0;box-shadow:none}
 .c1 .shot{background:#dfe5ff}.c2 .shot{background:#d6f1e3}.c3 .shot{background:#ffe6d0}
@@ -189,6 +195,14 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
         <ul>
           <li>Figma</li><li>FigJam</li><li>Maze</li><li>Dovetail</li><li>Storybook</li><li>Amplitude</li>
         </ul>
+        <h3>Certifications</h3>
+        <div class="cert">
+          <strong>Certified Usability Architect (CUA™)</strong>
+          <span>HFI Institute</span>
+          <span>Issued Feb 2018</span>
+          <span class="id">Credential ID bc1d5df7-beaf-4e7e-b4d4-78e24f5b8811</span>
+          <a href="https://hfiinstitute.com/in/verify?credential=bc1d5df7-beaf-4e7e-b4d4-78e24f5b8811" target="_blank" rel="noopener noreferrer">View certificate</a>
+        </div>
       </aside>
       </div>
     </div>
