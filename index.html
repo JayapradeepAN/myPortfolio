@@ -11,23 +11,24 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#f3f5f1; --surface:#ffffff; --ink:#16201b; --muted:#54625a; --line:#d5dcd5;
-  --accent:#2f4bff; --accent-ink:#ffffff; --tint:#e3e8ff;
+  --bg:#151515; --surface:#3b3b3b; --ink:#f2f2f2; --muted:#b8b8b8; --line:#4d4d4d;
+  --accent:#8fa0ff; --accent-ink:#0e1220; --tint:#444a6e;
   --head:'Inter','Segoe UI',system-ui,sans-serif;
   --body:'Inter','Segoe UI',system-ui,sans-serif;
   box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
 }
 @media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){--bg:#111714;--surface:#19211d;--ink:#eef2ee;--muted:#a3b0a8;--line:#2b3731;--accent:#8fa0ff;--accent-ink:#0e1220;--tint:#222a4d}
+  :root:not([data-theme="light"]){--bg:#151515;--surface:#3b3b3b;--ink:#f2f2f2;--muted:#b8b8b8;--line:#4d4d4d;--accent:#8fa0ff;--accent-ink:#0e1220;--tint:#444a6e}
 }
-:root[data-theme="dark"]{--bg:#111714;--surface:#19211d;--ink:#eef2ee;--muted:#a3b0a8;--line:#2b3731;--accent:#8fa0ff;--accent-ink:#0e1220;--tint:#222a4d}
+:root[data-theme="dark"]{--bg:#151515;--surface:#3b3b3b;--ink:#f2f2f2;--muted:#b8b8b8;--line:#4d4d4d;--accent:#8fa0ff;--accent-ink:#0e1220;--tint:#444a6e}
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}
 body{margin:0;background:var(--bg);color:color-mix(in srgb,var(--ink) 80%,transparent);font:400 1.0625rem/1.65 var(--body);-webkit-font-smoothing:antialiased}
 a{color:inherit}
+body{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='27.713' viewBox='0 0 16 27.713'%3E%3Cpath d='M0 4.619L8 0L16 4.619M0 4.619V13.856M16 4.619V13.856M0 13.856L8 18.475L16 13.856M8 18.475V27.713' fill='none' stroke='%23000' stroke-width='1'/%3E%3C/svg%3E");background-size:16px 27.713px}
 :focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
 .wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
-h1,h2,h3{font-family:var(--head);line-height:1.08;margin:0;letter-spacing:-.02em}
+h1,h2,h3{font-weight:400;font-family:var(--head);line-height:1.08;margin:0;letter-spacing:-.02em}
 p{margin:0}
 
 /* Fixed masthead */
@@ -69,7 +70,7 @@ section h2{font-size:clamp(2rem,5vw,3.25rem);margin-bottom:2.25rem}
 .bring li::marker{color:var(--accent)}
 .skills{padding:0}
 .skills h3:first-child{margin-top:.1rem}
-.skills h3{font-size:1.15rem;margin-bottom:1rem}
+.skills h3{font-size:1.15rem;font-weight:600;margin-bottom:1rem}
 .skills ul{list-style:none;margin:0 0 40px;padding:0;display:flex;flex-wrap:wrap;gap:.5rem}
 .skills li{background:var(--tint);padding:.35rem .85rem;border-radius:999px;font-size:.92rem;font-weight:500}
 .skills ul:last-child{margin-bottom:0}
@@ -155,13 +156,9 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
 <main id="top">
   <div class="hero">
     <div class="wrap intro">
-      <h1>I make complex enterprise software feel simple.</h1>
+      <h1>12+ years turning enterprise complexity into clarity.</h1>
       <p class="lede">I'm Jayapradeep, a lead UX Designer with 12+ years of experience designing enterprise software. I turn complex, data-heavy products into clear, usable experiences, from admin consoles and dashboards to multi-step configuration workflows. I work closely with product, engineering, and customers to simplify what’s hard without removing the power that expert users need.</p>
-      <div class="meta">
-        <div><b>12+ years</b><span>Designing for fintech, health and enterprise software</span></div>
-        <div><b>40+</b><span>Designers mentored across three companies</span></div>
-        <div><b>3 design systems</b><span>Built from audit to adoption</span></div>
-      </div>
+
     </div>
   </div>
 
@@ -187,13 +184,17 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
       </div>
       <div class="side">
       <aside class="skills" aria-label="Companies and tools">
-        <h3>Companies I worked</h3>
+        <h3>Skills</h3>
         <ul>
-          <li>Opentext</li><li>IDrive Softwares</li><li>Wipro technologies</li>
+          <li>Product thinking</li><li>UX research</li><li>Problem framing</li><li>Rapid prototyping</li><li>Interaction design</li><li>Accessibility</li><li>AI-assisted workflows</li><li>Design systems</li><li>Usability tests</li><li>Mentoring</li><li>Cross-team collaboration</li><li>Stakeholder management</li>
         </ul>
         <h3>Tools</h3>
         <ul>
           <li>Figma</li><li>FigJam</li><li>Maze</li><li>Dovetail</li><li>Storybook</li><li>Amplitude</li>
+        </ul>
+        <h3>Companies I worked</h3>
+        <ul>
+          <li>Opentext</li><li>IDrive Softwares</li><li>Wipro technologies</li>
         </ul>
         <h3>Certifications</h3>
         <div class="cert">
