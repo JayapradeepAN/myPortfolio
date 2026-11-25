@@ -72,14 +72,6 @@
     position: relative;
   }
   .hero-inner { width: min(1120px, 100% - 2.5rem); margin-inline: auto; }
-  .hero-tag {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: var(--accent-light); color: var(--accent-dark);
-    font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
-    padding: 6px 14px; border-radius: 100px;
-    margin-bottom: 2rem;
-  }
-  .hero-tag::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
   .hero h1 {
     font-family: var(--serif);
     font-size: clamp(2rem, 5vw, 3.5rem);
@@ -118,7 +110,6 @@
     font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
     color: var(--accent); font-weight: 500; margin-bottom: 1.25rem;
   }
-  .section-eyebrow::after { content: ''; flex: 1; height: 1px; background: var(--accent-light); max-width: 60px; }
   h2.section-title {
     font-family: var(--serif);
     font-size: clamp(1.8rem, 4vw, 2.8rem);
@@ -472,7 +463,6 @@
   .heuristic-num { color: var(--line); font-weight: 600; }
   .insight-quote p, .persona-quote { font-weight: 400; }
   .screen-annotation h3 { font-weight: 500; }
-  .section-eyebrow::after { background: var(--tint); }
   .kpi-strip, .comparison-wrapper, .empathy-map { box-shadow: none; }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
 </style>
@@ -496,7 +486,6 @@
 <div class="hero">
   <div class="hero-stripe"></div>
   <div class="hero-inner">
-    <div class="hero-tag">UX Case Study · Enterprise Workflow Redesign</div>
     <h1>Redesigning <em>Create Printer</em> in OES iPrint</h1>
     <p class="hero-sub">How I reduced task time by 61% and improved SUS from 44 to 82 by rethinking a critical IT admin workflow from first principles - serving both occasional and expert administrators without compromise.</p>
     <div class="hero-meta">
