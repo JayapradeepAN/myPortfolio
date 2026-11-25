@@ -66,7 +66,7 @@
 
 /* ─── HERO ─── */
   .hero {
-    border-bottom: 1px solid var(--rule);
+    position: relative;
     padding: calc(64px + 4.5rem) 0 4.5rem;
     overflow: hidden;
     position: relative;
@@ -107,8 +107,11 @@
 
   /* ─── LAYOUT ─── */
   .container { width: min(1120px, 100% - 2.5rem); margin-inline: auto; }
-  section { padding: 5rem 0; border-bottom: 1px solid var(--rule); }
-  section:last-child { border-bottom: none; }
+  section { padding: 5rem 0; position: relative; }
+  .hero::after, section::after, footer::before { content: ''; position: absolute; left: 50%; transform: translateX(-50%); width: min(1120px, 100% - 2.5rem); height: 1px; background: var(--rule); }
+  .hero::after, section::after { bottom: 0; }
+  footer::before { top: 0; }
+  section:last-of-type::after { display: none; }
 
   .section-eyebrow {
     display: flex; align-items: center; gap: 12px;
@@ -335,8 +338,8 @@
 
   /* ─── FOOTER ─── */
   footer {
+    position: relative;
     padding: 3rem 2rem; text-align: center;
-    border-top: 1px solid var(--rule);
   }
   footer p { font-size: 0.8rem; color: var(--ink-muted); }
   footer strong { color: var(--ink); }
