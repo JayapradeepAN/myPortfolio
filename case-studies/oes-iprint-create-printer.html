@@ -466,6 +466,16 @@
   ::-webkit-scrollbar-track { background: transparent; }
   ::-webkit-scrollbar-thumb { background: var(--rule); border-radius: 3px; }
 
+
+  /* Black content column on wide screens */
+  @media (min-width: 1280px) {
+    body {
+      background-image: linear-gradient(#000, #000), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='27.713' viewBox='0 0 16 27.713'%3E%3Cpath d='M0 4.619L8 0L16 4.619M0 4.619V13.856M16 4.619V13.856M0 13.856L8 18.475L16 13.856M8 18.475V27.713' fill='none' stroke='%23000' stroke-width='1'/%3E%3C/svg%3E");
+      background-size: 1200px 100%, 16px 27.713px;
+      background-position: center top, 0 0;
+      background-repeat: no-repeat, repeat;
+    }
+  }
   .kpi-number, .outcome-number { font-weight: 600; }
   .heuristic-num { color: var(--line); font-weight: 600; }
   .insight-quote p, .persona-quote { font-weight: 400; }
